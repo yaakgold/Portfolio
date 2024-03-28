@@ -1,12 +1,19 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    Sidenav content
+    <mat-action-list>
+      @for(slide of slides; track $index;)
+      {
+        <app-game [slide]="slide"></app-game>
+      }
+    </mat-action-list>
+
   </mat-sidenav>
 
   <mat-sidenav-content>
     <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <router-outlet></router-outlet>
+
+    <app-home [slides]="slides"></app-home>
   </mat-sidenav-content>
 </mat-sidenav-container>

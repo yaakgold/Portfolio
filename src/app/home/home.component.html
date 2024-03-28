@@ -1,8 +1,49 @@
-<mat-grid-list cols="4" rowHeight="100px">
-  @for (tile of tiles; track tile) {
+<div id="mainPage">
+  <mat-grid-list cols="10">
     <mat-grid-tile
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows"
-      [style.background]="tile.color">{{tile.text}}</mat-grid-tile>
-  }
-</mat-grid-list>
+      [colspan]="6"
+      [rowspan]="3"
+      [style.background]="'white'">
+      <mat-card id="sectOne">
+        <mat-card-title><h2>Game Developer</h2></mat-card-title>
+        <mat-card-content>
+          <h1>Ya'akov<br/>Goldberg</h1>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="4"
+      [rowspan]="4"
+      [style.background]="'#805f8d'">
+      <div class="slides">
+        <mat-card id="sectTwo"
+                  [ngStyle]="{opacity: hidden ? 0 : 1,
+                              transition: 'opacity ' + animationSpeed + 'ms ease-in-out'}">
+          <mat-card-title>{{slides[currentSlide].title}}</mat-card-title>
+          <mat-card-subtitle>{{slides[currentSlide].subtitle}}</mat-card-subtitle>
+          <img mat-card-image src="{{slides[currentSlide].url}}" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              <br/>
+              {{slides[currentSlide].description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>View Code</button>
+          </mat-card-actions>
+          <div id="changePanel">
+            <button mat-icon-button (click)="previous()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+            <button mat-icon-button (click)="next()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+          </div>
+        </mat-card>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      [colspan]="6"
+      [rowspan]="1"
+      [style.background]="'white'">
+      <a mat-stroked-button href="#"><h3><u>Email me</u></h3></a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

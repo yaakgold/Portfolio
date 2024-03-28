@@ -2,5 +2,12 @@
 
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: Monsterrat;
+    src: url("assets/fonts/Montserrat-Regular.ttf")
+}
+
+@font-face {
+    font-family: Bogart;
+    src: url("assets/fonts/Bogart-Medium-trial.ttf");
+}

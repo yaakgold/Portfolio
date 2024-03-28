@@ -1,0 +1,91 @@
+#mainPage
+{
+    height: 95vh;
+    background: white;
+    color: black;
+    font-family: Monsterrat, sans-serif;
+}
+
+#sectOne
+{
+    /*padding-top: 50px;*/
+    background: white;
+    text-align: center;
+}
+
+.slides
+{
+    margin: 5%;
+    padding: 5%;
+    max-width: 90%;
+    background: none;
+}
+
+h2, h3
+{
+    font-family: Monsterrat, sans-serif;
+    color: black;
+}
+
+h1
+{
+    font-family: "Bogart", sans-serif;
+    font-size: 1000%;
+}
+
+
+.slides {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .nextButton,
+    .previousButton {
+        position: absolute;
+        top: 50%;
+        border: 0px;
+        background-color: transparent;
+        font-size: 30px;
+        color: #fff;
+    }
+    .nextButton {
+        right: 20px;
+    }
+    .previousButton {
+        left: 20px;
+    }
+
+    #indicators {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        bottom: 20px;
+        width: 200px;
+        .indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: inline-block;
+            margin: 0px 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in-out;
+
+            &.active {
+                background-color: #4f4f4f;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{data.slide.title}}</mat-card-title>
+      <mat-card-subtitle>{{data.slide.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img id="imageCard" mat-card-image src="{{data.slide.url}}"
+    style="width: 600px"
+    >
+    <mat-card-content>
+      {{data.slide.description}}
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button>View Code</button>
+    </mat-card-actions>
+  </mat-card>
+</mat-dialog-content>

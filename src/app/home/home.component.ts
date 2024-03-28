@@ -1,26 +1,50 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
+import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatGridListModule],
+  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule, NgOptimizedImage, MatIcon],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 5, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 6, color: 'purple'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
+export class HomeComponent implements OnInit {
+  animationSpeed = 500;
+  autoPlay = false;
+  autoPlaySpeed = 3000;
+  currentSlide = 0;
+  hidden = false;
+  @Input() slides: any[] = [];
+
+
+  next() {
+    const currentSlide = (this.currentSlide + 1) % this.slides.length;
+    this.jumpToSlide(currentSlide);
+  }
+
+  previous() {
+    const currentSlide =
+      (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.jumpToSlide(currentSlide);
+  }
+
+  jumpToSlide(index: number) {
+    this.hidden = true;
+    setTimeout(() => {
+      this.currentSlide = index;
+      this.hidden = false;
+    }, this.animationSpeed);
+  }
+
+  ngOnInit() {
+    if (this.autoPlay) {
+      setInterval(() => {
+        this.next();
+      }, this.autoPlaySpeed);
+    }
+  }
 }
