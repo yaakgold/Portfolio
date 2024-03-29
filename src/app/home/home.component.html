@@ -3,7 +3,7 @@
     <mat-grid-tile
       [colspan]="6"
       [rowspan]="3"
-      [style.background]="'white'">
+      [style.background]="'#7a4d8c'">
       <mat-card id="sectOne">
         <mat-card-title><h2>Game Developer</h2></mat-card-title>
         <mat-card-content>
@@ -13,37 +13,37 @@
     </mat-grid-tile>
     <mat-grid-tile
       [colspan]="4"
-      [rowspan]="4"
+      [rowspan]="5"
       [style.background]="'#805f8d'">
       <div class="slides">
         <mat-card id="sectTwo"
                   [ngStyle]="{opacity: hidden ? 0 : 1,
-                              transition: 'opacity ' + animationSpeed + 'ms ease-in-out'}">
-          <mat-card-title>{{slides[currentSlide].title}}</mat-card-title>
-          <mat-card-subtitle>{{slides[currentSlide].subtitle}}</mat-card-subtitle>
-          <img mat-card-image src="{{slides[currentSlide].url}}" alt="Photo of a Shiba Inu">
+                              transition: 'opacity ' + animationSpeed + 'ms ease-in-out',
+                              'background-color': '#7a4d8c',
+                              'padding': '10px'}">
+          <mat-card-title><h2>{{slides[currentSlide].title}}</h2></mat-card-title>
+          <mat-card-subtitle><h3>{{slides[currentSlide].subtitle}}</h3></mat-card-subtitle>
+          <img src="{{slides[currentSlide].url}}" alt="Photo of a Shiba Inu"
+          style="width: 500px;"
+          >
           <mat-card-content>
             <p>
               <br/>
-              {{slides[currentSlide].description}}
+              {{slides[currentSlide].shortDescription}}
             </p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button>View Code</button>
+            <button mat-button color="secondary" (click)="openDialog(dialog, slides[currentSlide])">View Game</button>
           </mat-card-actions>
-          <div id="changePanel">
-            <button mat-icon-button (click)="previous()"><mat-icon>keyboard_arrow_left</mat-icon></button>
-            <button mat-icon-button (click)="next()"><mat-icon>keyboard_arrow_right</mat-icon></button>
-          </div>
         </mat-card>
       </div>
     </mat-grid-tile>
 
     <mat-grid-tile
       [colspan]="6"
-      [rowspan]="1"
-      [style.background]="'white'">
-      <a mat-stroked-button href="#"><h3><u>Email me</u></h3></a>
+      [rowspan]="2"
+      [style.background]="'#7a4d8c'">
+      <a mat-stroked-button href="mailto:yaakovgoldberg007@gmail.com"><h3><u>Email me</u></h3></a>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

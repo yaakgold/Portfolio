@@ -1,10 +1,10 @@
-<mat-dialog-content>
-  <mat-card>
+<mat-dialog-content style="background-color: #7a4d8c">
+  <mat-card style="max-width: 800px; background-color: #7a4d8c">
     <mat-card-header>
       <mat-card-title>{{data.slide.title}}</mat-card-title>
       <mat-card-subtitle>{{data.slide.subtitle}}</mat-card-subtitle>
     </mat-card-header>
-    <img id="imageCard" mat-card-image src="{{data.slide.url}}"
+    <img mat-card-image src="{{data.slide.url}}"
     style="width: 600px"
     >
     <mat-card-content>
@@ -12,7 +12,7 @@
     </mat-card-content>
 
     <mat-card-actions>
-      <button mat-button>View Code</button>
+      <a href="{{data.slide.linkToCode}}" target="_blank" mat-button>Go to code</a>
     </mat-card-actions>
   </mat-card>
 </mat-dialog-content>

@@ -9,7 +9,7 @@ import {
 import { MatListItem } from '@angular/material/list';
 import { Slide } from '../models/slide.model';
 import { MatCardModule } from '@angular/material/card';
-import { MatButton } from '@angular/material/button';
+import { MatAnchor, MatButton } from '@angular/material/button';
 
 export interface DialogData {
   slide: Slide;
@@ -26,12 +26,8 @@ export class GameComponent {
   @Input() slide: Slide | undefined;
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(DialogComponent, {
-      data: {
-        slide: this.slide
-      },
-    });
+  openDialog(): void {
+    openDialog(this.dialog, this.slide);
   }
 }
 
@@ -39,8 +35,16 @@ export class GameComponent {
   selector: 'app-dialog',
   templateUrl: 'dialog-data.html',
   standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatCardModule, MatButton]
+  imports: [MatDialogTitle, MatDialogContent, MatCardModule, MatButton, MatAnchor]
 })
 export class DialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+}
+
+export function openDialog(dialog: MatDialog, slide: Slide | undefined) {
+  dialog.open(DialogComponent, {
+    data: {
+      slide: slide
+    },
+  });
 }
