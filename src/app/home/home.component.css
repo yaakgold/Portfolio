@@ -1,7 +1,7 @@
 #mainPage
 {
     height: 95vh;
-    background: #7a4d8c;
+    background: #3a373b;
     color: black;
     font-family: Monsterrat, sans-serif;
 }
@@ -9,7 +9,7 @@
 #sectOne
 {
     /*padding-top: 50px;*/
-    background: #805f8d;
+    background: #3a373b;
     text-align: center;
 }
 

@@ -3,7 +3,7 @@
     <mat-grid-tile
       [colspan]="6"
       [rowspan]="3"
-      [style.background]="'#7a4d8c'">
+      [style.background]="'#3a373b'">
       <mat-card id="sectOne">
         <mat-card-title><h2>Game Developer</h2></mat-card-title>
         <mat-card-content>
@@ -14,12 +14,12 @@
     <mat-grid-tile
       [colspan]="4"
       [rowspan]="5"
-      [style.background]="'#805f8d'">
+      [style.background]="'#282628'">
       <div class="slides">
         <mat-card id="sectTwo"
                   [ngStyle]="{opacity: hidden ? 0 : 1,
                               transition: 'opacity ' + animationSpeed + 'ms ease-in-out',
-                              'background-color': '#7a4d8c',
+                              'background-color': '#5b555d',
                               'padding': '10px'}">
           <mat-card-title><h2>{{slides[currentSlide].title}}</h2></mat-card-title>
           <mat-card-subtitle><h3>{{slides[currentSlide].subtitle}}</h3></mat-card-subtitle>
@@ -42,7 +42,7 @@
     <mat-grid-tile
       [colspan]="6"
       [rowspan]="2"
-      [style.background]="'#7a4d8c'">
+      [style.background]="'#3a373b'">
       <a mat-stroked-button href="mailto:yaakovgoldberg007@gmail.com"><h3><u>Email me</u></h3></a>
     </mat-grid-tile>
   </mat-grid-list>

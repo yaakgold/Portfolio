@@ -1,9 +1,14 @@
 .main-page
 {
-    background-color: #805f8d;
+    background-color: #5b555d;
 }
 
 .sidenavbar
 {
-    background-color: #7a4d8c;
+    background-color: #5b555d;
+}
+
+button
+{
+    background-color: black;
 }
