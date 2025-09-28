@@ -4,7 +4,7 @@ import {
   MatCardActions,
   MatCardContent,
   MatCardFooter,
-  MatCardHeader,
+  MatCardHeader, MatCardImage,
   MatCardTitle
 } from '@angular/material/card';
 import {MatButton, MatButtonModule} from '@angular/material/button';
@@ -20,6 +20,7 @@ import {
 } from '@angular/material/dialog';
 import {DialogData} from '../portfolio/portfolio';
 import {DialogProject} from '../dialog-project/dialog-project';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-project-card',
@@ -32,7 +33,9 @@ import {DialogProject} from '../dialog-project/dialog-project';
     MatButton,
     MatCardFooter,
     MatChipSet,
-    MatChip
+    MatChip,
+    NgOptimizedImage,
+    MatCardImage
   ],
   templateUrl: './project-card.html',
   styleUrl: './project-card.scss'

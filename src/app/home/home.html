@@ -7,7 +7,7 @@
       </mat-card-title-group>
     </mat-card-header>
     <mat-card-content>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur consequatur debitis libero maiores, minus molestias, numquam perferendis quas quasi qui quidem reprehenderit soluta veniam vitae. Assumenda at repudiandae totam?</p>
+      <p>I'm a full stack software engineer with a passion for making video games. I have been writing code since I was 10 years old, and making games since I was 12. I am currently a solo developer working on a project, with intermittent game jam breaks. I specialize in creating systems, and writing clean maintainable code, even in game jam projects.</p>
     </mat-card-content>
   </mat-card>
 
@@ -16,10 +16,11 @@
       <mat-card-title-group>
         <mat-card-title>{{featuredProject.name}}</mat-card-title>
         <mat-card-subtitle>{{featuredProject.subtitle}}</mat-card-subtitle>
+        <img ngSrc="{{featuredProject.pic}}" alt="Picture of {{featuredProject.name}}" width="300" height="200" />
       </mat-card-title-group>
     </mat-card-header>
     <mat-card-content>
-      <p>{{featuredProject.description}}</p>
+      <p>{{featuredProject.summary}}</p>
     </mat-card-content>
     <mat-card-actions>
       <a mat-raised-button (click)="openDialog(featuredProject.id)">View More</a>

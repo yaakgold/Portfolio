@@ -1,12 +1,18 @@
 <div class="resume-section">
   <a matButton="filled" (click)="downloadFile()"><mat-icon>download</mat-icon> Download Resume</a>
 
-  <mat-accordion multi>
+  <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>Work Experience</mat-panel-title>
       </mat-expansion-panel-header>
-      <p>Here are a bunch of my work experiences</p>
+      <mat-tab-group>
+        @for (j of jobs; track j.company) {
+          <mat-tab label="{{j.company}}">
+            <app-work-experience [job]="j" />
+          </mat-tab>
+        }
+      </mat-tab-group>
     </mat-expansion-panel>
 
     <mat-expansion-panel>
@@ -20,7 +26,19 @@
       <mat-expansion-panel-header>
         <mat-panel-title>Skills</mat-panel-title>
       </mat-expansion-panel-header>
-      <p>Here are some of my skills</p>
+      <mat-tab-group>
+        <mat-tab label="Technical Skills">
+          <p>Here is some info on my time at SelectHealth</p>
+        </mat-tab>
+
+        <mat-tab label="Frameworks">
+          <p>Here is some info on my time at Motorola Solutions</p>
+        </mat-tab>
+
+        <mat-tab label="Personal Skills">
+          <p>Here is some info on my time at Level Home Inc.</p>
+        </mat-tab>
+      </mat-tab-group>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

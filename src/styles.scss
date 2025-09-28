@@ -13,6 +13,7 @@ html {
     ),
     typography: Roboto,
     density: 0,
+
   ));
 }
 
@@ -37,6 +38,11 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+* {
+  font-size: 25px;
+  font-weight: 300;
+}
+
 .cards {
   margin: auto;
   width: 75%;
@@ -58,6 +64,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 mat-card-footer {
   display: flex;
+  width: 100%;
   justify-content: center;
   border-top: gray solid 1px;
   border-bottom-left-radius: var(--mat-sys-corner-medium);
@@ -66,6 +73,11 @@ mat-card-footer {
 }
 
 @media (max-width: 800px) {
+  * {
+    font-size: 15px;
+    font-weight: 300;
+  }
+
   .cards {
     flex-direction: column;
   }

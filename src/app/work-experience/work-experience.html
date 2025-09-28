@@ -1,0 +1,12 @@
+<div class="job">
+  <span class="job-header">
+  <h1>{{job.position}}</h1>
+  <h1>{{job.startDate}} - {{job.endDate}}</h1>
+  </span>
+  <mat-divider></mat-divider>
+  <div>
+      @for (s of job.specifics; track s) {
+        <p>{{s}}</p>
+      }
+  </div>
+</div>

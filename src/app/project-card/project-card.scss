@@ -5,4 +5,12 @@ mat-card-content {
 mat-card-actions {
   display: flex;
   justify-content: center;
+  height: 100%;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }

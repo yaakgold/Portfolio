@@ -1,0 +1,16 @@
+p {
+  font-size: 75%;
+}
+
+.job-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.job {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: var(--mat-sys-on-primary-fixed) !important;
+  border-radius: var(--mat-sys-corner-medium);
+}
