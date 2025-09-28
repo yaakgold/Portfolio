@@ -1,0 +1,35 @@
+<div class="cards">
+  <mat-card appearance="raised" class="card-left">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>About me</mat-card-title>
+        <img mat-card-md-image ngSrc="/Headshot.png" alt="Photo of myself" width="800" height="800"/>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur consequatur debitis libero maiores, minus molestias, numquam perferendis quas quasi qui quidem reprehenderit soluta veniam vitae. Assumenda at repudiandae totam?</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="raised" class="card-right">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{featuredProject.name}}</mat-card-title>
+        <mat-card-subtitle>{{featuredProject.subtitle}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{featuredProject.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button (click)="openDialog(featuredProject.id)">View More</a>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-chip-set>
+        @for(tag of featuredProject.tags; track tag) {
+          <mat-chip [style]="'background-color: ' + tag.color">{{tag}}</mat-chip>
+        }
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>
+</div>

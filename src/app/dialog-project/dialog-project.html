@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{data.project.name}}</h1>
+<h1 mat-dialog-title>{{data.project.subtitle}}</h1>
+<mat-dialog-content>
+  <p>There will be a video of the game here</p>
+  <h1><b>Description</b></h1>
+  <p>{{data.project.description}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <a mat-raised-button href="{{data.project.projectLink}}" target="_blank">Github</a>
+  <button mat-raised-button (click)="onCloseClick()">Close</button>
+</mat-dialog-actions>
+<mat-dialog-actions class="tags" align="center">
+  <mat-chip-set>
+    @for(tag of data.project.tags; track tag) {
+      <mat-chip [style]="'background-color: ' + tag.color">{{tag}}</mat-chip>
+    }
+  </mat-chip-set>
+</mat-dialog-actions>

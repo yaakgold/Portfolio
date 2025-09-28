@@ -1,0 +1,18 @@
+<mat-card appearance="raised">
+  <mat-card-header>
+    <mat-card-title>{{project.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{project.summary}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button (click)="openDialog(project.id)">View More</a>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-chip-set>
+      @for(tag of project.tags; track tag) {
+        <mat-chip [style]="'background-color: ' + tag.color">{{tag}}</mat-chip>
+      }
+    </mat-chip-set>
+  </mat-card-footer>
+</mat-card>
