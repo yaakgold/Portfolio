@@ -33,6 +33,19 @@ export class Resume implements OnInit {
 
   jobs = {} as Job[];
 
+  education =
+    {
+      company: 'Neumont College of Computer Science',
+      position: 'Neumont College of Computer Science',
+      startDate: '2019',
+      endDate: '2022',
+      specifics: [
+        'Bachelor\'s of Science in Software and Game Development',
+        'Cumulative GPA: 3.97/4.0',
+        'Relevant Coursework: Unity2D/3D, AR/VR Development, Game Engines, C++ Programming, 3d Modeling'
+      ]
+    } as Job;
+
   constructor(private titleService: Title, private renderer: Renderer2, private jobService: Jobs) {
     this.titleService.setTitle('Yaakov Goldberg - Resume');
   }

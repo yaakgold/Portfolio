@@ -10,6 +10,8 @@ import {
 } from '@angular/material/dialog';
 import {DialogData} from '../portfolio/portfolio';
 import {MatChip, MatChipSet} from '@angular/material/chips';
+import {MatIcon} from '@angular/material/icon';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-dialog-project',
@@ -22,6 +24,8 @@ import {MatChip, MatChipSet} from '@angular/material/chips';
     MatDialogActions,
     MatChip,
     MatChipSet,
+    MatIcon,
+    NgOptimizedImage,
   ],
 })
 export class DialogProject {

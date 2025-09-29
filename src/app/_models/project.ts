@@ -1,4 +1,5 @@
 import {Tag} from './tag';
+import {LinkModel} from './link-model';
 
 export interface Project {
   id: number;
@@ -6,7 +7,7 @@ export interface Project {
   subtitle: string;
   summary: string;
   description: string;
-  projectLink: string;
-  pic: string;
+  projectLinks: LinkModel[];
+  pics: string[];
   tags: Tag[];
 }

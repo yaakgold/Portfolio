@@ -17,3 +17,10 @@ mat-expansion-panel {
 a {
   margin: 1%;
 }
+
+ul {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: var(--mat-sys-on-primary-fixed) !important;
+  border-radius: var(--mat-sys-corner-medium);
+}
