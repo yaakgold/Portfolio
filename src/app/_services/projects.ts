@@ -27,7 +27,7 @@ export class Projects {
       name: 'POST Your Game',
       subtitle: 'GMTK \'24',
       summary: 'POST Your Game is a short game used as an opportunity for me to learn the Godot game engine. I attempted to use as many different parts of the engine as I could, including teaching myself how to play video files.',
-      description: 'I decided to work with a new engine because I found myself needing a new spark for making games. While I am still making new game in Unity, I found this process enlightening because it required me to learn the entire engine on my own. With Godot being a relatively young engine, especially when compared to Unity, there weren\'t a lot of answers for very specific questions I had. This process was really good for me, and helped me reignite my love for making games, and has helped me look for new and exciting ideas.',
+      description: 'I decided to work with a new engine because I found myself needing a new spark for making games. While I am still making new games in Unity, I found this process enlightening because it required me to learn the entire engine on my own. With Godot being a relatively young engine, especially when compared to Unity, there weren\'t a lot of answers for very specific questions I had. This process was really good for me, and helped me reignite my love for making games, and has helped me look for new and exciting ideas.',
       projectLinks: [
         { name: 'Github', location: 'https://github.com/yaakgold/GMTK24', icon: null },
         { name: 'GMTK 2024', location: 'https://itch.io/jam/gmtk-2024/rate/2907100', icon: null },
@@ -40,14 +40,15 @@ export class Projects {
     {
       id: 2,
       name: 'Severed Odyssey',
-      subtitle: 'SkillsUSAA 2018 Interactive Media and Video Game Design',
-      summary: 'This was my first foray in Unity, and working on a very long project. I was responsible for a large majority of the coding, even having to go so far as to have my teammate on the project teach my calculous concepts I hadn\'t learned yet, so we could make the shooting feel better.',
-      description: 'Severed Odyssey was a once in a lifetime opportunity for me, and I am so glad I took it and ran with it. Working with one of my best friends on the game, who helped me learn a lot about math, proper teamwork, and programming as he was older than me, was something I forever cherish. As well, I will always remember taking this game to Louisville, Kentucky for the National level of the competition. During the State level, we received a note saying to add more to the game itself, so I had a great idea of adding multiplayer, with 2 weeks until the presentation event. Even though I had never programmed multiplayer before, I managed to finish it up 2 nights before we were set to present. In the end, we achieved 9th place at the National level!',
+      subtitle: 'SkillsUSA 2018 Interactive Media and Video Game Design',
+      summary: 'This was my first foray into Unity, and working on a large project. I was responsible for a large majority of the coding, even having to go so far as to have my teammate on the project teach me calculous concepts I hadn\'t learned yet.',
+      description: 'Severed Odyssey was a once in a lifetime opportunity for me, and I am so glad I took it and ran with it. Working with one of my friends on the game, who helped me learn a lot about math, proper teamwork, and programming as he was older than me, was something I will forever cherish. As well, I will always remember taking this game to Louisville, Kentucky for the National level of the competition. During the State level, we received a note saying to add more to the game itself, so I had a great idea of adding multiplayer, with 2 weeks until the presentation event. Even though I had never programmed multiplayer before, I managed to finish it up 2 nights before we were set to present. In the end, we achieved 9th place at the National level!',
       projectLinks: [
         { name: 'Github', location: 'https://github.com/yaakgold/SkillsGameCode', icon: null },
+        { name: 'Download', location: '/games/Severed Odyssey.zip', icon: 'download' }
       ],
       tags: [ Tag.UNITY, Tag.TEAM ],
-      pics: ['/SeveredOdysseyMainMenu.png']
+      pics: ['/SeveredOdysseyMainMenu.png', '/SeveredOdysseyGame1.png', '/SeveredOdysseyGame2.png']
     },
 
     {
@@ -55,7 +56,7 @@ export class Projects {
       name: 'Hell Manager',
       subtitle: 'Ludum Dare 33',
       summary: 'Hell Manager is the first game I ever made. I only had 12 hours to work on it due to other responsibilities, and the only code I knew at the time was Visual Basic. I didn\'t even understand events or anything beyond what a method was at the time, so I am very proud of this game, and the feedback I received from it.',
-      description: 'Sadly, I no longer have access to the code for this game, and it appears that Ludum Dare is no longer showing the page with all of my comments I received for the game. Despite no longer having the records of it, I will always talk about this project, and will always want to remember it because it was my first. As well, I remember having to create workarounds for all the different things I hadn\'t yet learned. The memory of getting my first positive feedback on the game, which was the first time I had ever even made a project, and posted it, will be something I hope to never forget.',
+      description: 'Sadly, I no longer have access to the code for this game, and it appears that Ludum Dare is no longer showing the page with all of the comments I received for the game. Despite no longer having the records of it, I will always talk about this project, and will always want to remember it because it was the first game I ever made without following a tutorial.',
       projectLinks: [
         { name: 'Download', location: '/games/HellManager.exe', icon: 'download' },
       ],

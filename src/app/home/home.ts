@@ -40,8 +40,11 @@ export class Home implements OnInit {
 
   featuredProject = {} as Project;
 
+  age = 0 as Number;
+
   constructor(private titleService: Title, private projectService: Projects) {
     this.titleService.setTitle('Yaakov Goldberg - Home');
+    this.age = ((new Date()).getFullYear() - 2001)
   }
 
   ngOnInit(): void {
