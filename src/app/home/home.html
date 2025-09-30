@@ -1,0 +1,36 @@
+<div class="cards">
+  <mat-card appearance="raised" class="card-left">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>About me</mat-card-title>
+        <img mat-card-md-image ngSrc="/Headshot.png" alt="Photo of myself" width="800" height="800"/>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>I'm a {{age}} year old full stack software engineer with a passion for making video games. I have been writing code since I was 10 years old, and making games since I was 12. I am currently a solo developer working on a project, with intermittent game jam breaks. I specialize in creating systems, and writing clean maintainable code, even during game jam competitions.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="raised" class="card-right">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{featuredProject.name}}</mat-card-title>
+        <mat-card-subtitle>{{featuredProject.subtitle}}</mat-card-subtitle>
+        <img ngSrc="{{featuredProject.pics[0]}}" alt="Picture of {{featuredProject.name}}" width="300" height="200" />
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{featuredProject.summary}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button (click)="openDialog(featuredProject.id)">View More</a>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-chip-set>
+        @for(tag of featuredProject.tags; track tag) {
+          <mat-chip [style]="'background-color: ' + tag.color">{{tag}}</mat-chip>
+        }
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>
+</div>

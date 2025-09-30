@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>{{data.project.name}}</h1>
+<h1 mat-dialog-title>{{data.project.subtitle}}</h1>
+<mat-dialog-content>
+  <div class="images">
+    @for (pic of data.project.pics; track pic) {
+      <img ngSrc="{{pic}}" alt="Image from {{data.project.name}}" width="300" height="200" />
+    }
+  </div>
+  <p>{{data.project.summary}} {{data.project.description}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  @for (link of data.project.projectLinks; track link) {
+    <a mat-raised-button href="{{link.location}}" target="_blank">
+      @if (link.icon != null && link.icon != '') {
+        <mat-icon>{{link.icon}}</mat-icon>
+      }
+      {{link.name}}
+    </a>
+  }
+  <button mat-raised-button (click)="onCloseClick()">Close</button>
+</mat-dialog-actions>
+<mat-dialog-actions class="tags" align="center">
+  <mat-chip-set>
+    @for(tag of data.project.tags; track tag) {
+      <mat-chip [style]="'background-color: ' + tag.color">{{tag}}</mat-chip>
+    }
+  </mat-chip-set>
+</mat-dialog-actions>

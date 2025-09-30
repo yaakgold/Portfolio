@@ -1,0 +1,26 @@
+.resume-section, mat-accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+mat-accordion {
+  width: 50%;
+}
+
+mat-expansion-panel {
+  width: 100%;
+  background-color: var(--mat-sys-on-primary-fixed-variant);
+}
+
+a {
+  margin: 1%;
+}
+
+ul {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: var(--mat-sys-on-primary-fixed) !important;
+  border-radius: var(--mat-sys-corner-medium);
+}

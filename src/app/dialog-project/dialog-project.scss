@@ -1,0 +1,31 @@
+.tags {
+  border-top: gray solid 1px;
+  background-color: var(--mat-sys-surface-bright) !important;
+}
+
+button {
+  background-color: var(--mat-sys-inverse-on-surface) !important;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+}
+
+mat-dialog-content {
+  align-items: center;
+}
+
+p {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}
