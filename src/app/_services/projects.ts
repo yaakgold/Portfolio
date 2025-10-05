@@ -9,6 +9,20 @@ export class Projects {
   projects: Project[] = [
     {
       id: 0,
+      name: 'The Collector\'s Horde',
+      subtitle: 'Ludum Dare 58',
+      summary: 'The plan for this Ludum Dare competition was to use my new process for drawing to see what I could create fully on my own with hand drawn assets. It did not go to plan, but I learned a lot from this process.',
+      description: 'One of the biggest things I learned from this, is that art takes a lot longer than I expected it to. Even though my art isn\'t the highest quality, and surely won\'t win me any awards, it took a lot longer to create than I expected. I had a lot of fun with this jam, and I plan to continue working on my art skills, both in terms of speed and design work. Hopefully next time, I will plan better so I can add audio to the game',
+      projectLinks: [
+        { name: 'Github', location: 'https://github.com/yaakgold/LD-58', icon: null },
+        { name: 'Ludum Dare 58', location: 'https://ldjam.com/events/ludum-dare/58/the-collectors-horde', icon: null },
+        { name: 'Download', location: '/games/TCH_Windows.zip', icon: 'download' },
+      ],
+      tags: [ Tag.VB, Tag.SOLO ],
+      pics: ['/TCH_1.png', '/TCH_2.png'],
+    },
+    {
+      id: 1,
       name: 'Aligeon',
       subtitle: 'Ludum Dare 50',
       summary: 'Aligeon is a project made for the 48-hour compo Ludum Dare game jam competition. I created my own random room generation system as the main component I learned for this project.',
@@ -23,7 +37,7 @@ export class Projects {
     },
 
     {
-      id: 1,
+      id: 2,
       name: 'POST Your Game',
       subtitle: 'GMTK \'24',
       summary: 'POST Your Game is a short game used as an opportunity for me to learn the Godot game engine. I attempted to use as many different parts of the engine as I could, including teaching myself how to play video files.',
@@ -38,7 +52,7 @@ export class Projects {
     },
 
     {
-      id: 2,
+      id: 3,
       name: 'Severed Odyssey',
       subtitle: 'SkillsUSA 2018 Interactive Media and Video Game Design',
       summary: 'This was my first foray into Unity, and working on a large project. I was responsible for a large majority of the coding, even having to go so far as to have my teammate on the project teach me calculous concepts I hadn\'t learned yet.',
@@ -52,7 +66,7 @@ export class Projects {
     },
 
     {
-      id: 3,
+      id: 4,
       name: 'Hell Manager',
       subtitle: 'Ludum Dare 33',
       summary: 'Hell Manager is the first game I ever made. I only had 12 hours to work on it due to other responsibilities, and the only code I knew at the time was Visual Basic. I didn\'t even understand events or anything beyond what a method was at the time, so I am very proud of this game, and the feedback I received from it.',
