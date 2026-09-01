@@ -9,6 +9,21 @@ export class Projects {
   projects: Project[] = [
     {
       id: 0,
+      name: "The Problematic Programmer",
+      subtitle: "Brackeys Game Jam 2026.2",
+      summary: "For this project, I wanted to focus on creating a multiplayer game, even though that is usually a death sentence in jam projects. I utilized Unity's new Multiplayer Services API as my backend system.",
+      description: "I had learned a lot from older multiplayer games I had worked on, but this one was different because I was handling a lot more interaction than I had dealt with previously. However, for me, that ended up making the development process more fun. I enjoyed falling into new issues that I would have never had in a single player game, but now had to solve. For instance, I spent about 2 hours trying to figure out a method to share the networked object between two different components. After a lot of testing, I figured out Unity had an updated way of passing network object data. Once I realized this, not only was I able to solve this issue, but I now had a better solution for other problems. I also now have a much more robust architecture in mind for future multiplayer projects knowing this.",
+      projectLinks: [
+        { name: 'Github', location: 'https://github.com/yaakgold/Brackeys-2026.2', icon: null },
+        { name: 'Brackeys Game Jam 2026.2', location: 'https://itch.io/jam/brackeys-16/rate/4952461', icon: null },
+        { name: 'Windows', location: 'games/The Problematic Programmer.zip', icon: 'download' },
+        { name: 'Linux', location: 'games/The Problematic Programmer_Linux.zip', icon: 'download' },
+      ],
+      pics: ['./The Problematic ProgrammerMain.png', './TPP_1.png', './TPP_2.png', './TPP_3.png'],
+      tags: [ Tag.UNITY, Tag.SOLO ]
+    },
+    {
+      id: 1,
       name: 'The Collector\'s Horde',
       subtitle: 'Ludum Dare 58',
       summary: 'The plan for this Ludum Dare competition was to use my new process for drawing to see what I could create fully on my own with hand drawn assets. It did not go to plan, but I learned a lot from this process.',
@@ -22,7 +37,7 @@ export class Projects {
       pics: ['/TCH_1.png', '/TCH_2.png'],
     },
     {
-      id: 1,
+      id: 2,
       name: 'Aligeon',
       subtitle: 'Ludum Dare 50',
       summary: 'Aligeon is a project made for the 48-hour compo Ludum Dare game jam competition. I created my own random room generation system as the main component I learned for this project.',
@@ -37,7 +52,7 @@ export class Projects {
     },
 
     {
-      id: 2,
+      id: 3,
       name: 'POST Your Game',
       subtitle: 'GMTK \'24',
       summary: 'POST Your Game is a short game used as an opportunity for me to learn the Godot game engine. I attempted to use as many different parts of the engine as I could, including teaching myself how to play video files.',
@@ -52,7 +67,7 @@ export class Projects {
     },
 
     {
-      id: 3,
+      id: 4,
       name: 'Severed Odyssey',
       subtitle: 'SkillsUSA 2018 Interactive Media and Video Game Design',
       summary: 'This was my first foray into Unity, and working on a large project. I was responsible for a large majority of the coding, even having to go so far as to have my teammate on the project teach me calculous concepts I hadn\'t learned yet.',
@@ -66,7 +81,7 @@ export class Projects {
     },
 
     {
-      id: 4,
+      id: 5,
       name: 'Hell Manager',
       subtitle: 'Ludum Dare 33',
       summary: 'Hell Manager is the first game I ever made. I only had 12 hours to work on it due to other responsibilities, and the only code I knew at the time was Visual Basic. I didn\'t even understand events or anything beyond what a method was at the time, so I am very proud of this game, and the feedback I received from it.',
